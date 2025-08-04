@@ -25,7 +25,7 @@ public abstract class BaseEntity {
 
     @Comment("생성일시")
     @CreatedDate
-    @Column(name = "creation_date", updatable = false, nullable = false)
+    @Column(name = "creation_date", updatable = false, nullable = false, columnDefinition = "datetime(6) default current_timestamp(6)")
     private LocalDateTime creationDate;
 
     @Comment("수정일시")

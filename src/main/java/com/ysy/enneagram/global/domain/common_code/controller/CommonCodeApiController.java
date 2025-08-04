@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/common-codes")
+@RequestMapping("/api/common-codes")
 @RequiredArgsConstructor
-public class CommonCodeController {
+public class CommonCodeApiController {
 
     private final CommonCodeService commonCodeService;
 
