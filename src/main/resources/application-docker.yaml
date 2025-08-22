@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://host.docker.internal:3306/enneagram
