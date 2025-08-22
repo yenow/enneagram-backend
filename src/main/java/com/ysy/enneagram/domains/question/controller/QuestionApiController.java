@@ -4,10 +4,7 @@ import com.ysy.enneagram.domains.question.dto.QuestionResponseDto;
 import com.ysy.enneagram.domains.question.service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +15,7 @@ public class QuestionApiController {
 
     private final QuestionService questionService;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/questions")
     public List<QuestionResponseDto> getAllQuestions() {
         List<QuestionResponseDto> questions = questionService.getAllQuestions();
