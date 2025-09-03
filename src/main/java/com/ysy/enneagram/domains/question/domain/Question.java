@@ -30,4 +30,8 @@ public class Question extends BaseEntity {
     @Comment("에니어그램 타입")
     @Column(name = "enneagram_type", length = 2)
     private String enneagramType;
+
+    @Comment("사용여부")
+    @Column(name = "is_use", columnDefinition = "TINYINT(1) default 0")
+    private boolean isUse;
 }

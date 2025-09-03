@@ -1,18 +1,20 @@
 package com.ysy.enneagram.domains.question.dto;
 
 import com.ysy.enneagram.domains.question.domain.Question;
+import com.ysy.enneagram.global.domain.common_code.dto.BaseDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Getter
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "질문 응답 DTO")
-public class QuestionResponseDto {
+public class QuestionResponseDto extends BaseDto {
 
     @Schema(description = "질문 ID")
     private Long id;

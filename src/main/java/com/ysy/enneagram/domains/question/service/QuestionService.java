@@ -17,8 +17,6 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
 
     public List<QuestionResponseDto> getAllQuestions() {
-        return questionRepository.findAll().stream()
-                .map(QuestionResponseDto::fromEntity)
-                .collect(Collectors.toList());
+        return questionRepository.findQuestion(9);
     }
 }
